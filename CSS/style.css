@@ -1,0 +1,25 @@
+/* General format
+Selector {
+    property: value;
+} */
+body {
+	background-image:url(backgroundimage.jpg);
+	background-size: cover;
+}
+
+h2 {
+    color: #A95486;
+    text-align: center;
+    border: 4px dashed rgba(170, 85, 133,0.7);
+    cursor: pointer;
+}
+
+.webtext {
+	color: red;
+	border: 4px dashed rgba(0,0,255,0.3);
+	text-align: center;
+}
+
+#div1 {
+	background: red;
+}
