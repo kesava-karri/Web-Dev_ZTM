@@ -2,6 +2,27 @@ header {
 	background-color: violet;
 }
 
+body {
+	background-image:url(backgroundimage.jpg);
+	background-size: cover;
+}
+
+img {
+	float:right;
+}
+
+footer {
+	clear: both;
+	color: brown;
+	text-align: center;
+}
+
 p {
-	color: red;
+	cursor: pointer;
+	color: #E28BB9;
+	border: dashed blue;
+	line-height: 30px;
+	font-weight: bold;
+	font-size:160%;
+	font-family: 'Kdam Thmor', cursive;
 }
