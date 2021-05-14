@@ -9,8 +9,31 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-.col {
+
+h1 {
 	color: grey;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 3rem;
+}
+
+hr {
+	border-color: #FA841B;
+	border-width: 3px;
+	max-width: 65px;
+}
+
+.btn {
+	font-weight: 700;
+	background-color: #FA841B;
+	border-radius: 300px;
+	text-transform: uppercase;
+}
+
+.btn-primary {
+	border: #FA841B;
+}
+
+.btn-xl:hover {
+	padding: 1rem 2rem;
+	background-color: #E56A00;
 }
