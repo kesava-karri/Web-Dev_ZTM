@@ -22,7 +22,7 @@ var checkDriverAge2 = function() {
     } else {
         return "Sorry, you are too young to drive this car. Powering off";
     }
-}
+}; //Function expression ends in ";" whereas function declaration doesn't.
 
 //function using pre-defined age rather than prompting the user
 // function checkDriverAge(age) {

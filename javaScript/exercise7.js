@@ -14,14 +14,14 @@ var database = [
 var newsfeed = [
     {
         username: "Martin",
-        timeline: "Living like a river",
+        timeline: "When you're screaming",
     },
     {
         username: "Garrix",
-        timeline: "Only here you whisper",
+        timeline: "but they only here you whisper",
     },
     {
         username: "Troye",
-        timeline: "There for you",
+        timeline: "I'll be there for you",
     }
 ];
