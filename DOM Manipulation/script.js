@@ -1,7 +1,6 @@
 var button = document.querySelector("button");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var li_all = document.querySelectorAll("li");
 
 function inputLength() {
     return input.value.length;
@@ -12,6 +11,12 @@ function addItem() {
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
     input.value = ""; //Clears the input text after adding to the list
+    
+    //Delete button for newly created list items
+    var button = document.createElement("button"); 
+    button.appendChild(document.createTextNode("Delete"));
+    li.appendChild(button);
+    button.onclick = removeParent;
 }
 
 function addListAfterClick() {
@@ -26,12 +31,30 @@ function addListAfterKeypress(event) { //event is received automatically
     }
 }
 
-button.addEventListener("click", addListAfterClick) 
+function crossoff(event) {
+    if(event.target.tagName === "LI") { //The target returns in uppercase
+        event.target.classList.toggle("done");
+    }
+}
 
-input.addEventListener("keypress", addListAfterKeypress) 
-
-li_all.forEach(function(item) {
-    item.addEventListener("click", function(){
-        item.classList.toggle("done");
+function addDeleteButton() { //Delete button for existing items
+    var li_all = document.querySelectorAll("li");
+    li_all.forEach(function(item) {
+        var button = document.createElement("button");
+        button.appendChild(document.createTextNode("Delete"));
+        item.appendChild(button);
+        button.onclick = removeParent;
     })
-})
+}
+
+function removeParent(event) {
+    event.target.parentNode.remove();
+}
+
+button.addEventListener("click", addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
+
+ul.addEventListener("click", crossoff);
+
+addDeleteButton();
