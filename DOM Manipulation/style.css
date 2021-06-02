@@ -19,5 +19,5 @@
   }
   
   .done, #item {
-    text-decoration: none;
+    text-decoration: line-through;
   }

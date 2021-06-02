@@ -1,6 +1,7 @@
 var button = document.querySelector("button");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var li_all = document.querySelectorAll("li");
 
 function inputLength() {
     return input.value.length;
@@ -28,3 +29,9 @@ function addListAfterKeypress(event) { //event is received automatically
 button.addEventListener("click", addListAfterClick) 
 
 input.addEventListener("keypress", addListAfterKeypress) 
+
+li_all.forEach(function(item) {
+    item.addEventListener("click", function(){
+        item.classList.toggle("done");
+    })
+})
