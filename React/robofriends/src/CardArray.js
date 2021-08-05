@@ -10,7 +10,7 @@ const CardArray = ({ robots }) => {
           <Card
             key={user.id}
             id={user.id}
-            name={user.name} 
+            name={user.name}
             email={robots[i].email}
           />
         )
