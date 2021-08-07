@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = (props) => {
+const Scroll = (props) => {
   return (
     <div style={{overflowY: 'scroll', border: '5px solid black', height: '800px'}}>
       {props.children}
@@ -8,4 +8,4 @@ const Search = (props) => {
   );
 }
 
-export default Search;
+export default Scroll;
