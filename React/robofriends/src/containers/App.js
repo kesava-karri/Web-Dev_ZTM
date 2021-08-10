@@ -3,6 +3,8 @@ import CardArray from '../components/CardArray';
 import SearchBox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary';
+
 
 class App extends Component{
   constructor() {
@@ -26,7 +28,7 @@ class App extends Component{
   render() {
     const {robots, searchfield } = this.state;
     const filteredRobots = robots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchfield)
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase())
     })
     return (!robots.length ?
       <h1>Loading...</h1>:
@@ -35,7 +37,9 @@ class App extends Component{
           <h1 className='f1'>Robots - Not Transformers</h1>
           <SearchBox searchChange = {this.onSearchChange}/>
           <Scroll>
-            <CardArray robots={filteredRobots}/>
+            <ErrorBoundary>
+              <CardArray robots={filteredRobots}/>
+            </ErrorBoundary>
           </Scroll>
         </div>
       )
