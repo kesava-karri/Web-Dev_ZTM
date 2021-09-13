@@ -1,5 +1,5 @@
-const largeNumber = 569;
+export const largeNumber = 569;
 
-module.exports = {
-  largeNumber: largeNumber,
-} 
+// module.exports = {
+//   largeNumber: largeNumber,
+// } 
